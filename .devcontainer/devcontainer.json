@@ -1,0 +1,20 @@
+{
+    "name": "Practice DevContainer",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "."
+    },
+    "customizations": {
+		"vscode": {
+            "extensions": [
+                "vscjava.vscode-java-pack",    // Java support in VS Code
+                "formulahendry.leetcode",       // Optional: LeetCode extension for VS Code
+                "yzhang.markdown-all-in-one",
+                "RomanPeshkov.vscode-text-tables",
+                "bierner.markdown-mermaid",
+            ]
+        }
+    },
+    "postCreateCommand": "java -version",  // Verify Java is installed
+    "remoteUser": "root"
+}
