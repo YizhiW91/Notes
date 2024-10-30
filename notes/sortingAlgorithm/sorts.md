@@ -12,12 +12,18 @@
 * The recursive process took advantage of preserve order from the previous actions.
 * Similar questions:
   * Count of Smaller Numbers After Self. #315
-  * 求小和.
+  * 求小和: 求所有比当前数左边小的数之和。
+  * 逆序对：左边的数如果比右边的数大，则两个数构成逆序队， 求所有逆序对。
 
 ## Quick Sort
-* The process is to find one number(could be random), then put the number in the array so that left and right side are less than and greater than the number. Then do the same for the two parts.
+* The process is to find one number(could be random), then partition the array so that left side is less than or equal to and right side is greater than the number. Then do the same for the two parts.
+The coding idea is to imagine the less and larger number area, and expand the area accordingly.
 * Time complexity varies based on sampling:
   * The Best case scenario: O(nlogN). The best scenario is the number selected always equally split. Perfect dichotomy.
   * The Worst case scenario: O(n2). The worst scenario is the number selected always go to the end of the array, causing sorting the whole array every time.
+* Improvements of quick sort
+  * Phase1 - Always select the last position number to sort.
+  * Phase2 - Randomly select number to sort.
+  * Phase3 - Randomly select number to sort, and put the numbers equal to the selected one in the middle and only sort the rest two part.
 * Similar questions:
   * Sort Colors(Dutch flag) #75

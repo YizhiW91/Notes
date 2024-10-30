@@ -3,13 +3,14 @@ package test;
 import java.util.Arrays;
 
 import implementation.MergeSort;
+import implementation.QuickSort;
 
 public class SortTest {
 
     public static void main(String[] args){
         int trial = 50000;
         int[] arr = arrGenerator();
-        int[] res = MergeSort.sort(arr);
+        int[] res = QuickSort.sort(arr);
         Arrays.sort(arr);
         boolean cont = true;
         int i = 0;
