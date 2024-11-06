@@ -1,4 +1,4 @@
-package implementation;
+package main.java.implementation.sorts;
 
 public class MergeSort{
     // bisect the array, order the sub arrays and merge.
