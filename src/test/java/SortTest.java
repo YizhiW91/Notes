@@ -4,18 +4,19 @@ import java.util.Arrays;
 import main.java.implementation.sorts.HeapSort;
 import main.java.implementation.sorts.MergeSort;
 import main.java.implementation.sorts.QuickSort;
+import main.java.implementation.sorts.RadixSort;
 
 
 public class SortTest {
     
     public static void main(String[] args){
-        int trial = 1;
+        int trial = 500000;
         int[] arr = arrGenerator();
         int[] arrCopy = null;
         if(arr != null){
             arrCopy = arr.clone();
         }    
-        QuickSort.sort(arr);
+        RadixSort.sort(arr);
         Arrays.sort(arrCopy);
         boolean cont = true;
         int i = 0;
@@ -27,8 +28,8 @@ public class SortTest {
     }
 
     public static int[] arrGenerator(){
-        int sizeUpperLimit = 10;
-        int numUpperLimit = 100;
+        int sizeUpperLimit = 10000;
+        int numUpperLimit = 1000;
         int size = (int) (Math.random() * sizeUpperLimit)-1;
         if(size == 0){
             return null;

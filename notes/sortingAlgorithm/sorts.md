@@ -51,3 +51,44 @@ The one improvement on the traditional heap sort is to use heapify instead of he
 from an array is an O(N) level operation. This change will not affect the overall complexity of the heap sort.
 ### Similar Questions
  * Sort a nearly sorted array(k sorted array)
+
+## Non-comparative Sorting - Radix Sort
+The above sorting algorithms are all based on comparison. Non-comparative sorting seeks for finding the pattern in the given array and use it to recreate or rearrange the array without comparing all elements in the array.
+
+Radix sort is one of the them. The idea of radix sort is to sort digit by digit. Sort algorithm goes from smallest digit to highest digit. Put each digit into a bucket and pour them out accordingly.
+
+Pseudo code for an interesting implementation without using 10 buckets.
+```Java
+public static void radixSort(int[] arr, int l, int r){
+  int maxValue = getMax(arr, l, r);
+  int maxDigit = getMaxDigit(maxValue);
+  for(int d = 1; d<=maxDigit; d++){
+      int[] counter = new int[10];
+      // put numbers into counter
+      for(int i = l; i<= r; i++){
+          int numInDigit = getDigit(arr[i], d);
+          counter[numInDigit]++;
+      }
+      // convert counter into a less than or equal to count array by accumulative sum from the beginning
+      // for example, the counter is [0,1,2,1,0,0,0,0,0,0]
+      // after the change, value goes[0,1,3,4,4,4,4,4,4,4], meaning how many numbers have numbers in this digit less than or equal to the position index
+      for(int i = 1; i<10; i++){
+          counter[i] += counter[i-1];
+      }
+      // pour the array(i, j) from the end to start and put them into the helper array
+      int[] helper = new int[r-l+1];
+      for(int i = r; i>=l; i--){
+          int numInDigit = getDigit(arr[i], d);
+          int pos = counter[numInDigit] - 1;
+          helper[pos] = arr[i];
+          counter[numInDigit]--;
+      }
+      // assign helper back
+      for(int i=l; i<=r; i++){
+          arr[i] = helper[i-l];
+      }
+  }
+}
+```
+
+The complexity of the algorithem should be **O(N)**, space complexity should also be **O(N)**.
