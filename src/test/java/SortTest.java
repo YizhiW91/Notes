@@ -1,7 +1,11 @@
 package test.java;
 
+import java.nio.Buffer;
 import java.util.Arrays;
+
+import main.java.implementation.sorts.BubbleSort;
 import main.java.implementation.sorts.HeapSort;
+import main.java.implementation.sorts.InsertionSort;
 import main.java.implementation.sorts.MergeSort;
 import main.java.implementation.sorts.QuickSort;
 import main.java.implementation.sorts.RadixSort;
@@ -16,7 +20,7 @@ public class SortTest {
         if(arr != null){
             arrCopy = arr.clone();
         }    
-        RadixSort.sort(arr);
+        InsertionSort.sort(arr);
         Arrays.sort(arrCopy);
         boolean cont = true;
         int i = 0;

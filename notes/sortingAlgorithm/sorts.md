@@ -1,15 +1,44 @@
 # Sorting Algorithm
 
+## Overview
+| Name        | Time Complexity | Space Complexity | Stable |
+|-------------|-----------------|------------------|--------|
+| Bubble Sort | O(N^2) | O(1) | Y |
+| Insertion Sort | O(N^2) | O(1) | Y |
+| Merge Sort | O(NLogN) | O(N) | Y |
+| Quick Sort | O(NLogN) | O(LogN) | N |
+| Heap Sort | O(NLogN) | O(1) | N |
+| Radix Sort(for number) | O(dN) | O(N) | Y |
+
+
 ## Bubble Sort
 * Complexity not related to how data is presented.
+* Starting with the first element. Compare it with next, if greater than, swap them. Keep moving until the end.
+* Complexity is **O(n^2)**. When the array is near sorted, the best case complexity is **O(n)**. Space complexity is **O(1)**. **Stable**.
 
 ## Insertion Sort
 * Complexity related to data representation.
-
+* Starting with the second element. Compare it with the previous element, if the previous element is greater, move the element one position ahead. 
+If the previous element is less than or equal to, no need to move. At the end, move the selected element to the correct position.
+* Complexity is **O(n^2)**. When the array is near sorted, the best case complexity is **O(n)**. Space complexity is **O(1)**. **Stable**.
+* The benefit of insertion sort is when N is small, about 60, the sort is very quick.
 
 ## Merge Sort
-* Complexity based on master theorem - O(nlogN).
-* The recursive process took advantage of preserve order from the previous actions.
+* Core idea:
+  * Split the array into two separate sections until cannot be splitted.
+  * Merge the two section into one with a helper. 
+  * The rule for merging is take whoever is smaller into the helper first. The recursive process took advantage of preserve order from the previous actions. 
+* Psedu Code
+```java
+public int[] mergeSort(int[] arr, int l, int r){
+  int M = (r+l)/2
+  mergeSort(arr, l, M);
+  mergeSort(arr, M+1, r);
+  merge(arr, l, M, r);
+  return arr;
+}
+```
+* Complexity based on master theorem - T = 2*T(N/2) + O(N). a=2, b=2, c=1. logba == c == 1. So the complexity is **O(nlogN)**. Space complexity is **O(N)**. **Stable**.
 * Similar questions:
   * Count of Smaller Numbers After Self. #315
   * 求小和: 求所有比当前数左边小的数之和。
@@ -18,9 +47,19 @@
 ## Quick Sort
 The process is to find one number(could be random), then partition the array so that left side is less than or equal to and right side is greater than the number. Then do the same for the two parts.
 The coding idea is to imagine the less and larger number area, and expand the area accordingly.
+```java
+public int[] quickSort(int[] arr, int l, int r){
+  int less, more = partition(arr, l, r);
+  quickSort(arr, l, less-1);
+  quickSort(arr, l, more+1);
+  return arr;
+}
+```
 * Time complexity varies based on sampling:
-  * The Best case scenario: O(nlogN). The best scenario is the number selected always equally split. Perfect dichotomy.
-  * The Worst case scenario: O(n2). The worst scenario is the number selected always go to the end of the array, causing sorting the whole array every time.
+  * The Best case scenario: **O(nlogN)**. The best scenario is the number selected always equally split. Perfect dichotomy.
+  * The Worst case scenario: **O(n2)**. The worst scenario is the number selected always go to the end of the array, causing sorting the whole array every time.
+* Space complexity **O(logN)**
+* **Not Stable**
 * Improvements of quick sort
   * Phase1 - Always select the last position number to sort.
   * Phase2 - Randomly select number to sort.
@@ -45,7 +84,7 @@ while(heapSize > 0){
 ```
 ### Complexity
 The process of converting arr to maxHeap is a **O(NlogN)** operation, and pop the value to make a sorted array is also **O(NlogN)**. 
-Combined the complexity is **O(NlogN)**. Space complexity is O(1).
+Combined the complexity is **O(NlogN)**. Space complexity is **O(1)**. **Not stable**.
 ### Improvement
 The one improvement on the traditional heap sort is to use heapify instead of heapInsert to create an max heap. To create a max/min heap 
 from an array is an O(N) level operation. This change will not affect the overall complexity of the heap sort.
