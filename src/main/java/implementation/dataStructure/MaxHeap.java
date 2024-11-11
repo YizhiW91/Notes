@@ -1,9 +1,9 @@
-package main.java.implementation;
+package main.java.implementation.dataStructure;
 
 /**
  * Offer general operations for managing an int array heap
  */
-public class maxHeap {
+public class MaxHeap {
 
     // for moving element of index position up
     public static void heapInsert(int[] arr, int index){

@@ -15,26 +15,30 @@ public class SortTest {
     
     public static void main(String[] args){
         int trial = 500000;
-        int[] arr = arrGenerator();
-        int[] arrCopy = null;
-        if(arr != null){
-            arrCopy = arr.clone();
-        }    
-        InsertionSort.sort(arr);
-        Arrays.sort(arrCopy);
         boolean cont = true;
         int i = 0;
         while(i<= trial && cont){
-            cont = Arrays.equals(arr, arrCopy);
+            int[] arr = arrGenerator();
+            int[] arrCopy = null;
+            if(arr != null){
+                arrCopy = arr.clone();
+            }    
+            QuickSort.sort(arr);
+            if(arrCopy != null){
+                Arrays.sort(arrCopy);
+                cont &= Arrays.equals(arr, arrCopy);
+            } else{
+                cont &= (arr == null && arrCopy == null);
+            }
             i++;
         }
         System.out.println("Compare:"+cont);
     }
 
     public static int[] arrGenerator(){
-        int sizeUpperLimit = 10000;
+        int sizeUpperLimit = 100;
         int numUpperLimit = 1000;
-        int size = (int) (Math.random() * sizeUpperLimit)-1;
+        int size = (int) (Math.random() * sizeUpperLimit)+1;
         if(size == 0){
             return null;
         }

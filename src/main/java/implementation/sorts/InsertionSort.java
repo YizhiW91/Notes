@@ -1,7 +1,6 @@
 package main.java.implementation.sorts;
 
 import main.java.implementation.Util;
-import main.java.implementation.maxHeap;
 
 public class InsertionSort {
 

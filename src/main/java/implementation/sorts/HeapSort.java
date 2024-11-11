@@ -1,7 +1,7 @@
 package main.java.implementation.sorts;
 
 import main.java.implementation.Util;
-import main.java.implementation.maxHeap;
+import main.java.implementation.dataStructure.MaxHeap;
 
 public class HeapSort {
 
@@ -9,12 +9,12 @@ public class HeapSort {
         int heapSize = arr.length;
         // first, make the array max heap
         for(int i = (arr.length/2)-1; i>=0; i--){
-            maxHeap.heapify(arr, i, heapSize);
+            MaxHeap.heapify(arr, i, heapSize);
         }
         // then pop the root, swap it with the end of the array, lower the heapSize
         while(heapSize > 0){
             Util.swap(arr, 0, (heapSize-1));
-            maxHeap.heapify(arr, 0, --heapSize);
+            MaxHeap.heapify(arr, 0, --heapSize);
         }
         return arr;
     }    
