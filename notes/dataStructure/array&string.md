@@ -27,6 +27,10 @@
 #### Two Pointers
 Two pointers is an extremely common technique used to solve array and string problems. It involves having two integer variables that both move along an iterable. In this article, we are focusing on arrays and strings. This means we will have two integers, usually named something like i and j, or left and right which each represent an index of the array or string.
 
+##### Tricks
+* To stop at the middle of an array including middle element: (n-1)/2
+* To stop at the middle of an array excluding middle element: n/2-1
+
 ##### Two pointers for reversing an array/string.
 * LC: 167. Two Sum II - Input Array Is Sorted
 * LC: Reverse String
@@ -107,8 +111,8 @@ int numSubarrayProductLessThanK(vector<int>& nums, int k) {
 
 * Example 3: 713. Subarray Product Less Than K.
 
-Given an array of positive integers nums and an integer k, return the number of subarrays where the product of all the elements in the subarray is strictly less than k.
-
+Given an array of positive integers nums and an integer k, 
+return the number of subarrays where the product of all the elements in the subarray is strictly less than k.
 For example, given the input nums = [10, 5, 2, 6], k = 100, the answer is 8. The subarrays with products less than k are:
 
 [10], [5], [2], [6], [10, 5], [5, 2], [2, 6], [5, 2, 6]
@@ -132,7 +136,8 @@ For example, given the input nums = [10, 5, 2, 6], k = 100, the answer is 8. The
 
 643. Maximum Average Subarray I
 You are given an integer array nums consisting of n elements, and an integer k.
-Find a contiguous subarray whose length is equal to k that has the maximum average value and return this value. Any answer with a calculation error less than 10-5 will be accepted.
+Find a contiguous subarray whose length is equal to k that has the maximum average value and return this value. 
+Any answer with a calculation error less than 10-5 will be accepted.
 
 Note: For fixed length window problem, we don't even need left pointer.
 
@@ -151,5 +156,31 @@ double findMaxAverage(vector<int>& nums, int k) {
         ans = max(ans, sum);
     }
     return ans/k;
+}
+```
+
+2090. K Radius Subarray Averages
+
+You are given a 0-indexed array nums of n integers, and an integer k.
+The k-radius average for a subarray of nums centered at some index i with the radius k is the average of all elements in nums between the indices i - k and i + k (inclusive). If there are less than k elements before or after the index i, then the k-radius average is -1.
+Build and return an array avgs of length n where avgs[i] is the k-radius average for the subarray centered at index i.
+The average of x elements is the sum of the x elements divided by x, using integer division. The integer division truncates toward zero, which means losing its fractional part.
+For example, the average of four elements 2, 3, 1, and 5 is (2 + 3 + 1 + 5) / 4 = 11 / 4 = 2.75, which truncates to 2.
+
+```cpp
+vector<int> getAverages(vector<int>& nums, int k) {
+
+    vector<int> res(nums.size(), -1);
+    int l =0;
+    long long sum  =0;
+    int ind = k;
+    for(int i =0 ; i< nums.size(); ++i){
+        sum += nums[i];
+        if(i >= k*2){
+            res[ind++] = sum/(2*k+1);
+            sum -= nums[l++]; // This is a smart move. Assign the value to ans first then reduce the left.
+        }
+    }
+    return res;
 }
 ```
