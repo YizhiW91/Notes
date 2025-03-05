@@ -42,6 +42,13 @@
 * Q3. Longest Substring Without Repeating Characters
   * Try shorter solution.
 
+* Q3005. Count Elements With Maximum Frequency
+  * Try to use one map and one traverse.
+
+* Q451. Sort characters by frequency.
+  * Note the immutability of the string.
+  * Customize comparator
+
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
 * Red-black tree??
