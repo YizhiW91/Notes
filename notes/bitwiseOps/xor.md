@@ -19,6 +19,8 @@ a^b == b^a
 a^b^c == b^c^a 
 // same number xor = 0
 a^a == 0
+// number xor 0 = number
+a^0 == a
 ```
 
 ## Take first right most 1 from a number
