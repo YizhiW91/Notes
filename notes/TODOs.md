@@ -49,6 +49,13 @@
   * Note the immutability of the string.
   * Customize comparator
 
+* Q2958. Length of Longest Subarray With at Most K Frequency
+  * Try not use while loop in the for loop of sliding window.
+
+Q930. Binary Subarrays With Sum
+  * Try again, remember what approach to use when encountering the subarray and sum.
+  * Try not use a hashmap
+
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
 * Red-black tree??
