@@ -1,0 +1,37 @@
+# SOE - The sieve of Eratosthenes
+
+##  How it works
+The Sieve of Eratosthenes finds all prime numbers up to n by:
+* Creating a boolean array of size n+1 (initially marking all numbers as prime).
+* Iterating through numbers starting from 2 to **sqrt(n)**, and for each prime p, marking its multiples as non-prime.
+* Continuing this process for the next unmarked number (which is the next prime).
+
+## Time complexity
+O(n * loglogn), no need to know how it is calculated.
+
+Note: looping to **sqrt(n)** instead of n does not reduce time complexity.
+
+
+## Implementation
+```cpp
+    vector<bool> soe(int n){
+        vector<bool> isPrime(n+1, true);
+        // mark 0, 1 as non-prime
+        isPrime[0] = isPrime[1] = false;
+        for(int i=2; i<=sqrt(n); i++){
+            if(isPrime[i]){
+                // note here we start from i*i instead of i*2, as 2 is the first prime and should have been calulated. For example, j = 5, we don't need to check 10 as it has been calculated as a multipler by 2 already.  
+                for(int j = i * i; j<=n; j+=i){
+                    isPrime[j] = false;
+                }
+            }
+        }
+        return isPrime;
+    }
+
+```
+
+
+
+## Practice:
+* Q2523. Closest Prime Numbers in Range

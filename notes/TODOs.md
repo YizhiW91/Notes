@@ -56,6 +56,9 @@ Q930. Binary Subarrays With Sum
   * Try again, remember what approach to use when encountering the subarray and sum.
   * Try not use a hashmap
 
+Q523. Closest Prime Numbers in Range
+  * SOE practice.
+
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
 * Red-black tree??
