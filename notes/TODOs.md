@@ -65,6 +65,9 @@ Q2379. Minimum Recolors to Get K Consecutive Black Blocks
 Q3208. Alternating Groups II
   * Try one pass. Very typical wrap around question.
 
+Q3306. Count of Substrings Containing Every Vowel and K Consonants II
+  * Solve it. Remember the sliding winding trick.
+
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
 * Red-black tree??

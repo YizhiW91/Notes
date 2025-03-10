@@ -54,6 +54,11 @@ The structure to solve the problem is usually like this:
 Note:
 * The tricky part of sliding window is the management of the left pointer, whether to include it or not. Usually, if you want to include left pointer, initialize it with 0. If you do not want to include it, initialize it with -1.
 
+* Common techs:
+    * prefix_sum
+    * at_most(k) - at_most(k+1) to find question asking substring containing(k)
+
+
 ##### Examples
 * Example 1: Given an array of positive integers nums and an integer k, find the length of the longest subarray whose sum is less than or equal to k. This is the problem we have been talking about above. We will now formally solve it.
 
