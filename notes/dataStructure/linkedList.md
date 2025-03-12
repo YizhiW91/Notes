@@ -16,9 +16,80 @@
 ## Operations
 * One should be very familar with the following operations:
   * Traverse
+```cpp
+function traverse(LinkedListNode* head){
+    LinkedListNode *dummy = head;
+    while(dummy->next != nullptr){
+        cout<< dummy->val << endl;
+        dummy = dummy->next;
+    }
+}
+```
   * Insert
+```cpp
+// single linked list
+void insert(LinkedListNode* nodeBefore, LinkedListNode* newNode){
+    if (!nodeBefore || !newNode) return; // Avoid null pointer dereference
+    newNode->next = nodeBefore->next;
+    nodeBefore->next = newNode;
+}
+
+// double linked linst
+void insert(LinkedListNode* nodeBefore, LinkedListNode* newNode){
+    if (!nodeBefore || !newNode) return; // Avoid null pointer dereference
+    newNode->next = nodeBefore->next;
+    newNode->prev = nodeBefore;
+    if (nodeBefore->next) { // Only update prev if nodeBefore is not the last node
+        nodeBefore->next->prev = newNode;
+    }
+    nodeBefore->next = newNode;
+}
+```
   * Remove
-  * reserve single or double linked list.
+```cpp
+// single linked list
+void remove(LinkedListNode* nodeBefore){
+    if (!nodeBefore || !nodeBefore->next) return; // Check for null to prevent crashes
+    nodeBefore->next = nodeBefore->next->next; // Bypass the next node (deleting it)
+}
+
+// double linked linst
+void remove(LinkedListNode* node){
+    if(!node) return;
+    if(node->prev) node->prev->next = node->next;
+    if(node->next) node->next->prev = node->prev;
+}
+```
+
+  * reverse single or double linked list.
+```cpp
+// single linked list
+LinkedListNode* reverse(LinkedListNode* head){
+    LinkedListNode *curr = head, *prev = nullptr, *tmp;
+    while(curr){
+        tmp = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = tmp;
+    }
+    return prev;
+}
+
+// double linked list
+LinkedListNode* reverse(LinkedListNode* head){
+    LinkedListNode *curr = head, *prev = nullptr, *tmp;
+    while(curr){
+        tmp = curr->next;
+        // below two line can be done by std::swap(curr->next, curr->prev)
+        curr->next = prev;
+        curr->prev = tmp;
+        prev = curr;
+        curr = tmp;
+    }
+    return prev;
+}
+```
+
 * Common methods are two pointers, or AKS slow/fast pointers. One travel slow one travel fast. In those questions, one should be very familar with difference scenarios and where the pointer should end up at.
     * Scenario 1. The slow pointer should end up at the middle or middle - 1.
     * Scenario 1. The slow pointer should end up at the middle or middle + 1.
