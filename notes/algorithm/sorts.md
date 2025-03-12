@@ -131,3 +131,9 @@ public static void radixSort(int[] arr, int l, int r){
 ```
 
 The complexity of the algorithem should be **O(N)**, space complexity should also be **O(N)**.
+
+## Sorts implementation:
+
+* In Java, Arrays.sort() is implemented using a variant of the Quick Sort algorithm, which has a space complexity of O(logN) for sorting two arrays. The Java solution also uses an auxiliary array of length N. This is the dominating term for the Java solution.
+
+* In C++, the sort() function is implemented as a hybrid of Quick Sort, Heap Sort, and Insertion Sort, with a worse-case space complexity of O(log⁡N). This is the main space used by the C++ solution.

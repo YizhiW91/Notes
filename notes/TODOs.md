@@ -68,6 +68,10 @@ Q3208. Alternating Groups II
 Q3306. Count of Substrings Containing Every Vowel and K Consonants II
   * Solve it. Remember the sliding winding trick.
 
+Q2529. Maximum Count of Positive Integer and Negative Integer
+  * Good binary search question. Try the built-in function and self implemented method.
+
+
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
 * Red-black tree??
