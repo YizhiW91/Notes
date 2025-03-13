@@ -65,12 +65,12 @@ void remove(LinkedListNode* node){
 ```cpp
 // single linked list
 LinkedListNode* reverse(LinkedListNode* head){
-    LinkedListNode *curr = head, *prev = nullptr, *tmp;
+    LinkedListNode *curr = head, *prev = nullptr, *nextNode;
     while(curr){
-        tmp = curr->next;
+        nextNode = curr->next;
         curr->next = prev;
         prev = curr;
-        curr = tmp;
+        curr = nextNode;
     }
     return prev;
 }
@@ -92,7 +92,27 @@ LinkedListNode* reverse(LinkedListNode* head){
 
 * Common methods are two pointers, or AKS slow/fast pointers. One travel slow one travel fast. In those questions, one should be very familar with difference scenarios and where the pointer should end up at.
     * Scenario 1. The slow pointer should end up at the middle or middle - 1.
-    * Scenario 1. The slow pointer should end up at the middle or middle + 1.
+```cpp
+    ListNode* middleNode(ListNode* head) {
+        ListNode *fast = head->next, *slow = head;
+        while(fast && fast->next){
+            slow = slow->next;
+            fast = fast->next->next;
+        }
+        return slow;
+    }
+```
+    * Scenario 2. The slow pointer should end up at the middle or middle + 1.
+```cpp
+    ListNode* middleNode(ListNode* head) {
+        ListNode *fast = head, *slow = head;
+        while(fast && fast->next){
+            slow = slow->next;
+            fast = fast->next->next;
+        }
+        return slow;
+    }
+```
 
 ## Challenges
 * Dutch Flag Question -  Partition List #86

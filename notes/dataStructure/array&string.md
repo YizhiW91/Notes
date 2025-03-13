@@ -56,6 +56,7 @@ Note:
 
 * Common techs:
     * prefix_sum
+      * For calculating the prefix sum, another common techniques are **difference array**.  For example, if we need to apply +1 to range [i, j], you can essentially write the difference array as [..., 1,...0, -1] where 1 is the ith position and -1 is the j-1 position. When you apply prefix sum on the difference array, you get [..., 1,1,1,1,1,1,0,0,0] where 1 is assigned to range [i,j].
     * at_most(k) - at_most(k+1) to find question asking substring containing(k)
 
 

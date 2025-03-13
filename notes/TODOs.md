@@ -71,6 +71,17 @@ Q3306. Count of Substrings Containing Every Vowel and K Consonants II
 Q2529. Maximum Count of Positive Integer and Negative Integer
   * Good binary search question. Try the built-in function and self implemented method.
 
+Q3356. Zero Array Transformation II
+  * Difference array
+  * Binary search 
+  * Line swap
+
+Q2226. Maximum Candies Allocated to K Children
+  * Binary search
+
+Q92. Reverse Linked List II
+  * Write it in a cleaner manner and solve it within 10 mins
+  * Note the position of prev, curr when starting the reverse and at the end of the reverse.
 
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
