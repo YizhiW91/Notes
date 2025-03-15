@@ -83,6 +83,12 @@ Q92. Reverse Linked List II
   * Write it in a cleaner manner and solve it within 10 mins
   * Note the position of prev, curr when starting the reverse and at the end of the reverse.
 
+19. Remove Nth Node From End of List
+  * add a sentinel
+
+82. Remove Duplicates from Sorted List II
+  * Try it again
+
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
 * Red-black tree??

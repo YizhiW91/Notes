@@ -13,6 +13,9 @@
 * LL with sentinel nodes.
   * LL with head and tail to make logic cleaner. Head.next is the real head, tail.prev is the real tail.
 
+## Common Techniques
+* When asked to remove some sections, it is a good idea to use a sentinel node to start as it makes head remove easier.
+
 ## Operations
 * One should be very familar with the following operations:
   * Traverse
