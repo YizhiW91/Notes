@@ -89,6 +89,11 @@ Q19. Remove Nth Node From End of List
 Q82.  Remove Duplicates from Sorted List II
   * Try it again
 
+Q2074. Reverse Nodes in Even Length Groups
+  * Wasn't able to solve it, try again.
+
+Q328. Odd Even Linked List
+  * Try not to use the curr node.
 
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
