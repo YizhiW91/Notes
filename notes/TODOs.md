@@ -95,6 +95,10 @@ Q2074. Reverse Nodes in Even Length Groups
 Q328. Odd Even Linked List
   * Try not to use the curr node.
 
+Q707. Design Linked List
+  * Try singly linked list;
+  * Try doubly linked list;
+
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
 * Red-black tree??
