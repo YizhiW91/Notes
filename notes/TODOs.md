@@ -99,6 +99,13 @@ Q707. Design Linked List
   * Try singly linked list;
   * Try doubly linked list;
 
+Q3169. Count Days Without Meetings
+  * Try to solve it, using Map.
+  * Try to solve without additional space.
+  
+Q1047. Remove All Adjacent Duplicates In String
+  * Try without stack in C++;
+
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
 * Red-black tree??
