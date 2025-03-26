@@ -106,6 +106,10 @@ Q3169. Count Days Without Meetings
 Q1047. Remove All Adjacent Duplicates In String
   * Try without stack in C++;
 
+Q2033. Minimum Operations to Make a Uni-Value Grid
+  * Try find median of the array.
+  * Try without median, prefix sum.
+
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
 * Red-black tree??

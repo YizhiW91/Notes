@@ -30,6 +30,7 @@ Two pointers is an extremely common technique used to solve array and string pro
 ##### Tricks
 * To stop at the middle of an array including middle element: (n-1)/2
 * To stop at the middle of an array excluding middle element: n/2-1
+* Find median, nth_element(x.begin(), x.begin()+x.size()/2, x.end()) -> x[x.size()/2] O(n) on average
 
 ##### Two pointers for reversing an array/string.
 * LC: 167. Two Sum II - Input Array Is Sorted
