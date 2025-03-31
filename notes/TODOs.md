@@ -110,6 +110,12 @@ Q2033. Minimum Operations to Make a Uni-Value Grid
   * Try find median of the array.
   * Try without median, prefix sum.
 
+Q71. Simplify Path
+  * Remember how to split string.
+  
+Q739. Daily Temperatures
+  * Think about the structure, what data structure mimics it. A bit hard.
+
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
 * Red-black tree??

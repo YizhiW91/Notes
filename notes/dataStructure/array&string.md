@@ -6,6 +6,9 @@
 * Java and Python has immutable String, meaning foo = "abc", if one needs to change it to "abd", the whole string needs to be recreated.
 * C++ has mutable String.
 
+To split a string in C++, use stringstream and getline.
+The difference between lower and upper case letter in ascII is 32.
+
 ### Array
 * Array has fixed length or dynamic. Most of the language uses dynamic length. The space allocation usually happens at max capacity by doubling the capacity, etc. vector in C++ or ArrayList in Java.
 
