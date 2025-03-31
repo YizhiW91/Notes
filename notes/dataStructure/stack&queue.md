@@ -37,6 +37,7 @@ Common implementation is to use a double linked list with head and tail tracked.
 
 # Monotonic
 
+<<<<<<< HEAD
 A monotonic stack or queue is one whose elements are always sorted. It can be sorted either ascending or descending, depending on the algorithm. Monotonic stacks and queues maintain their sorted property by removing elements that would violate the property before adding new elements. For example, let's say you had a monotonically increasing stack, currently stack = [1, 5, 8, 15, 23]. You want to push 14 onto the stack. To maintain the sorted property, we need to first pop the 15 and 23 before pushing the 14 - after the push operation, we have stack = [1, 5, 8, 14].
 
 ## Common Tricks
@@ -59,3 +60,6 @@ Q2104. Sum of Subarray Ranges
 
 Q1063. Number of Valid Subarrays
   * Exactly the same question as above.
+=======
+A monotonic stack or queue is one whose elements are always sorted. It can be sorted either ascending or descending, depending on the algorithm. Monotonic stacks and queues maintain their sorted property by removing elements that would violate the property before adding new elements. For example, let's say you had a monotonically increasing stack, currently stack = [1, 5, 8, 15, 23]. You want to push 14 onto the stack. To maintain the sorted property, we need to first pop the 15 and 23 before pushing the 14 - after the push operation, we have stack = [1, 5, 8, 14].
+>>>>>>> 19d7eba (Added monotonic stack/queue section.)
