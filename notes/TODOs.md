@@ -118,6 +118,17 @@ Q739. Daily Temperatures
 
 Q2873. Maximum Value of an Ordered Triplet I
   * Try space O(n) and space O(1) approach
+  * Space O(1) is tricky, like DP question. The current step is preparing for the next step
+
+Q239. Sliding Window Maximum
+  * Monotonic deque
+
+Q1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit
+  * Very good question for explaining how monotonic works. 
+
+Q496. Next Greater Element I
+  * Stack.
+
 
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
