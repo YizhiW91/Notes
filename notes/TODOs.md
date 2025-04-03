@@ -116,6 +116,9 @@ Q71. Simplify Path
 Q739. Daily Temperatures
   * Think about the structure, what data structure mimics it. A bit hard.
 
+Q2873. Maximum Value of an Ordered Triplet I
+  * Try space O(n) and space O(1) approach
+
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
 * Red-black tree??
