@@ -129,6 +129,8 @@ Q1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limi
 Q496. Next Greater Element I
   * Stack.
 
+Q901. Online Stock Span
+  * monotonic stack.
 
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
