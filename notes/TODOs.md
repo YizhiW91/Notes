@@ -141,6 +141,19 @@ Q907. Sum of subarray Minimums
 Q649. Dota2 Senate
   * The total round of votes is tricky.
 
+Q232. Implement Queue using Stacks
+  * Try the amortized O(1) solution.
+
+Q1673. Find the Most Competitive Subsequence
+  * Monotonic.
+
+Q236. Lowest Common Ancestor of a Binary Tree
+  * Check from bottom up.
+
+Q111. Minimum Depth of Binary Tree
+  * Try DFS and BFS.
+  * Understand why BFS is superior and the limitation on DFS.
+
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
 * Red-black tree??
