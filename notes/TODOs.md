@@ -132,6 +132,15 @@ Q496. Next Greater Element I
 Q901. Online Stock Span
   * monotonic stack.
 
+Q1863. Sum of All Subset XOR Totals
+  * Backtracking(recursive) to get the subset.
+
+Q907. Sum of subarray Minimums
+  * Monotonic. Should come up with O(n2) solution. O(n) solution needs some thoughts.
+
+Q649. Dota2 Senate
+  * The total round of votes is tricky.
+
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
 * Red-black tree??
