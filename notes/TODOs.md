@@ -154,6 +154,9 @@ Q111. Minimum Depth of Binary Tree
   * Try DFS and BFS.
   * Understand why BFS is superior and the limitation on DFS.
 
+Q1944. Number of Visible People in a Queue
+  * still monotonic, try not to overcomplicate it.
+
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
 * Red-black tree??

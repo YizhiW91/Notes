@@ -82,4 +82,38 @@ void dfs(TreeNode* node){
 }
 ```
 
+### BFS - Breath First Search
+BFS is implemented iteratively with a queue. 
+
+In binary tree algorithm problems, BFS is usually better than using DFS as it tends to find the solution quicker. In an interview, you may be asked some trivia regarding BFS vs DFS, such as their drawbacks. 
+* Efficiency wise, the main disadvantage of DFS is that you could end up wasting a lot of time looking for a value if the value is close to the root but on the right(assuming we go left->right).
+* Space wise, DFS uses space linear to the tree depth(O(logN) in a perfect tree), BFS uses space linear to the level size(O(n) in a perfect tree).
+
+
+The implementation of the iterative approach:
+```cpp
+void traverse(TreeNode* root){
+    queue<TreeNode*> q;
+    q.push(root);
+    while(!q.empty()){
+        // get the size of the level
+        int n = q.size();
+        for(int i=0; i<n; i++){
+            TreeNode* node = q.front();
+            q.pop();
+
+            // do some logic here
+            cout<<node->val<<endl;
+
+            // add children to the q
+            if(node->left) q.push(node->left);
+            if(node->right) q.push(node->right);
+            
+        }
+    }
+}
+```
+
+
+
 # Graph
