@@ -157,6 +157,13 @@ Q111. Minimum Depth of Binary Tree
 Q1944. Number of Visible People in a Queue
   * still monotonic, try not to overcomplicate it.
 
+Q225. Implement Stack using Queues
+  * Try pop O(n), push O(n)
+  * Can you do it with 1 queue.
+
+Q2104. Sum of Subarray Ranges
+  * Another typical subarray monotonic question. Similar to Q907.
+
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
 * Red-black tree??
