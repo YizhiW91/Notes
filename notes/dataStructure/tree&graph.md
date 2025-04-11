@@ -114,6 +114,9 @@ void traverse(TreeNode* root){
 }
 ```
 
+### Binary search tree
+
+
 
 
 # Graph

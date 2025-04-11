@@ -135,9 +135,6 @@ Q901. Online Stock Span
 Q1863. Sum of All Subset XOR Totals
   * Backtracking(recursive) to get the subset.
 
-Q907. Sum of subarray Minimums
-  * Monotonic. Should come up with O(n2) solution. O(n) solution needs some thoughts.
-
 Q649. Dota2 Senate
   * The total round of votes is tricky.
 
@@ -161,8 +158,25 @@ Q225. Implement Stack using Queues
   * Try pop O(n), push O(n)
   * Can you do it with 1 queue.
 
+
+### Monotonic Subarray min/max
+Q907. Sum of subarray Minimums
+  * Monotonic. Should come up with O(n2) solution. O(n) solution needs some thoughts.
+
 Q2104. Sum of Subarray Ranges
   * Another typical subarray monotonic question. Similar to Q907.
+
+Q1063. Number of Valid Subarrays
+  * Exactly the same question as above.
+
+Q2398. Maximum Number of Robots Within Budget
+  * Combination of moving window and monotonic.
+
+
+Q103. Binary Tree Zigzag Level Order Traversal
+  * The trick is just push the value to the ans stack with different direction.
+  * Try to get clear about the rules of BFS in and out.
+  * Try DFS
 
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions

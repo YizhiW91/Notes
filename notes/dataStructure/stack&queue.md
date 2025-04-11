@@ -49,3 +49,13 @@ A monotonic stack or queue is one whose elements are always sorted. It can be so
     * left is the index of prev element that's strictly less than or greater than stack top. If doesn't exist, use -1.
     * right is the index of next element that's strictly less than or greater than stack top. If doesn't exist, use n.
   * Let’s say: nums = [3, 1, 2]. Focus on element 1 at index 1. As a minimum, we want to know how many subarrays have 1 as the minimum. On the left, there's no element smaller than 1, so left = -1. On the right, 2 is larger, so right = 2. The answer is (1-(-1)) * (2 - 1) = 2.
+
+Examples:
+Q907. Sum of subarray Minimums
+  * Monotonic. Should come up with O(n2) solution. O(n) solution needs some thoughts.
+
+Q2104. Sum of Subarray Ranges
+  * Another typical subarray monotonic question. Similar to Q907.
+
+Q1063. Number of Valid Subarrays
+  * Exactly the same question as above.
