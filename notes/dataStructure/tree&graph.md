@@ -115,8 +115,15 @@ void traverse(TreeNode* root){
 ```
 
 ### Binary search tree
+If the left child value always less than the parent value, and the parent value is less than the right child value. The tree is 
+called binary search tree.
 
+Operations in O(logN) time.
+* Searching - Binary search
+* Adding
+* Removing
 
+Traversing the tree from min to max can be done via inorder DFS.
 
 
 # Graph
