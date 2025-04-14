@@ -178,6 +178,12 @@ Q103. Binary Tree Zigzag Level Order Traversal
   * Try to get clear about the rules of BFS in and out.
   * Try DFS
 
+Q98. Validate Binary Search Tree.
+  * Typical BST question, space O(1) solution.
+
+Q701. Insert into a Binary Search Tree
+  * Don't complicate things. For BST you can always insert a leaf node without breaking BSF rules.
+
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
 * Red-black tree??
