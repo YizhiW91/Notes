@@ -184,6 +184,9 @@ Q98. Validate Binary Search Tree.
 Q701. Insert into a Binary Search Tree
   * Don't complicate things. For BST you can always insert a leaf node without breaking BSF rules.
 
+Q200. Number of Islands
+  * Understand the space and time complexity.
+
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
 * Red-black tree??

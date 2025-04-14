@@ -16,9 +16,9 @@
 ```math
 \text{when} f(n) = O(n^c)\\
 
-\text{if}  \log_{b}a < c, \text{then}  T(n) ~ O(n^c)\\
-\text{if}  \log_{b}a > c, \text{then}  T(n) ~ O(n^{\log_{b}a})\\
-\text{if}  \log_{b}a = c, \text{then}  T(n) ~ O(nlogN)
+\text{if}  \log_{b}a < c, \text{then}  T(n) \text{->} O(n^c)\\
+\text{if}  \log_{b}a > c, \text{then}  T(n) \text{->}  O(n^{\log_{b}a})\\
+\text{if}  \log_{b}a = c, \text{then}  T(n) \text{->} O(n{\log_{b}{a}}*logN)
 
 
 ```

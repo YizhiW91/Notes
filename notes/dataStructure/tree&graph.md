@@ -118,12 +118,94 @@ void traverse(TreeNode* root){
 If the left child value always less than the parent value, and the parent value is less than the right child value. The tree is 
 called binary search tree.
 
-Operations in O(logN) time.
+#### Operations in O(logN) time.
 * Searching - Binary search
 * Adding
+  * one could always insert a new node as a child of the leaf without breaking existing BST.
+    * Start at the root.
+    * Compare the new value to the current node
+    * Recursively go left or right depending on comparison:
+        * If new value < current node → go left.
+        * If new value ≥ current node → go right.
+    * When you reach a nullptr (empty child), you insert the new value there as a leaf.
 * Removing
 
+#### Traverse.
 Traversing the tree from min to max can be done via inorder DFS.
+```cpp
+void dfs(TreeNode* root){
+    // traverse left
+    dfs(root->left);
+    // mid
+    some_oepration(root);
+    // traverse right
+    dfs(root->right);
+}
+
+```
+
+It is also possible to use iterative approach, but inorder dfs iteration is more complicated than preorder dfs.
+```cpp
+void inorder_iter_dfs(TreeNode* root){
+    stack<TreeNode*> s;
+    TreeNode* curr = root;
+    while(!s.empty() || curr != nullptr){
+        if(curr != nullptr){
+            s.push(curr);
+            curr = curr->left;
+        }else{
+            curr = s.top();
+            s.pop();
+            // do operation for node here
+            do_something(curr);
+            curr = curr->right;
+        }
+    }
+}
+```
+
+### Binary search tree - Red-Black Tree
+In a regular BST, performance can degrade to O(n) if the tree becomes unbalanced (like a linked list). A Red-Black Tree ensures that the tree height stays logarithmic in the number of nodes — so operations like search, insert, and delete stay O(log n).
+
+Each node has a color: red or black. The tree maintains these 5 rules:
+* Every node is either red or black.
+* The root is always black.
+* All leaves (null pointers) are considered black.
+* Red nodes can’t have red children (i.e., no two reds in a row).
+* Every path from a node to its descendant nulls has the same number of black nodes (called "black-height").
+
+
+⚙️ Operations (Search / Insert / Delete)
+* Search works just like in a normal BST.
+* Insert: Node is initially added as red, then the tree is adjusted (recoloring + rotation) to fix violations.
+* Delete: More complex; removal may cause imbalance and requires fixes (may involve multiple rotations and recoloring).
 
 
 # Graph
+
+Concepts:
+* Edges of a node can either be **directed** or **undirected**. 
+* Connected component: A group of nodes that are connected by edges.
+*  The number of edges that can be used to reach the node is the node's **indegree**. 
+*  The number of edges that can be used to leave the node is the node's **outdegree**. 
+*  Nodes that are connected by an edge are called **neighbors**. 
+*  A graph can be either **cyclic** or **acyclic**. 
+   *  Cyclic means that the graph has a cycle.
+   *  Acyclic means that it doesn't. 
+
+## Common Interview Questions
+In graph problems, there are multiple common formats that graph will be given in.
+* Array of edges
+  * In this input format, the input will be a 2D array. Each element of the array will be in the form [x, y], which indicates that there is an edge between x and y.
+  * It is slow to iterate through the array for every node to find out the neighbors. Instead, we use pre-process the array and put start ->end to a **hashmap**.
+* Adjacency list
+  * In an adjacency list, the nodes will be numbered from 0 to n - 1. The input will be a 2D integer array, let's call it graph. graph[i] will be a list of all the outgoing edges from the ith node.
+* Adjacency matrix
+  * The nodes will be numbered from 0 to n - 1. You will be given a 2D matrix of size n x n, let's call it graph. If graph[i][j] == 1, that means there is an outgoing edge from node i to node j.
+  * We can preproess the matrix to create a **hashmap** to aovid going through the matrix everytime when we need to access neighbor of ith node. Though both approaches are O(n2).
+* Matrix
+  * Each element in the matrix represents a node. The edge is usually determined by direct adjacency. Those problems need careful understanding on the question description.
+
+
+## DFS
+When using DFS on graph questions, it helps to maintain a seen set or array to track which node was visited to avoid cycle/undirected graph questions.
