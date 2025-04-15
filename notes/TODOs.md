@@ -187,6 +187,15 @@ Q701. Insert into a Binary Search Tree
 Q200. Number of Islands
   * Understand the space and time complexity.
 
+Q1466. Reorder Routes to Make All Paths Lead to the City Zero
+  * Pay attention to the if condition during dfs.
+Q1971. Find if Path Exists in Graph
+  * Exact the same issue as above. When using DFS, make sure set seen after added element to stack to avoid duplicated visit. 
+  * Disjoint set union
+
+Q1557. Minimum Number of Vertices to Reach All Nodes
+  * Don't over think.
+
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
 * Red-black tree??

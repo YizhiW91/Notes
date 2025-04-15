@@ -20,6 +20,39 @@ The most important thing is that the `number of buckets`(size of your hash table
 Common number of buckets are power of 2s.
 
 
+## Hashmap in C++ and Java
+* C++
+  * In C++, unordered_map and unordered_set does not support data structure that comes without hash function, for example pair and tuple. (C++20 pair comes with hash function, so it is no longer an issue.)
+  * set and map do support pair and tuple as set and map uses operator `<` in the process instead of hash.
+* Java
+  * Hashset and Hashmap works the same way as unordered_map and unordered_set in C++. To make the entry hashable, one need to override equals() and hashCode() method.
+
+How to make it work in cpp:
+```cpp
+struct pair_hash {
+    size_t operator()(const pair<int, int>& p) const {
+        // A simple but effective hash combining technique
+        return hash<int>()(p.first) ^ (hash<int>()(p.second) << 1);
+    }
+};
+
+int main() {
+    unordered_set<pair<int, int>, pair_hash> mySet;
+    mySet.insert({1, 2});
+    mySet.insert({3, 4});
+
+    if (mySet.count({1, 2})) {
+        cout << "Found (1, 2)" << endl;
+    }
+}
+```
+How to make it work in Java:
+```java
+Set<Int> set = new HashSet<>();
+set.add(convertToHash({1,2}));
+System.out.println(set.contains(convertToHash({1,2}))); // true
+```
+
 # Set
 
 The difference between a set and hash table is that sets do not map their keys to anything. Sets are more convenient to use when you only care about checking if elements exist. You can add, remove, and check if an element exists in a set all in O(1).
