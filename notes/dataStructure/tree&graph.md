@@ -141,7 +141,6 @@ void dfs(TreeNode* root){
     // traverse right
     dfs(root->right);
 }
-
 ```
 
 It is also possible to use iterative approach, but inorder dfs iteration is more complicated than preorder dfs.
@@ -197,9 +196,9 @@ Concepts:
 In graph problems, there are multiple common formats that graph will be given in.
 * Array of edges
   * In this input format, the input will be a 2D array. Each element of the array will be in the form [x, y], which indicates that there is an edge between x and y.
-  * It is slow to iterate through the array for every node to find out the neighbors. Instead, we use pre-process the array and put start ->end to a **hashmap**.
+  * It is slow to iterate through the array for every node to find out the neighbors. Instead, we use pre-process the array and put start ->end to a **hashmap**. This is **VERY COMMON**.
 * Adjacency list
-  * In an adjacency list, the nodes will be numbered from 0 to n - 1. The input will be a 2D integer array, let's call it graph. graph[i] will be a list of all the outgoing edges from the ith node.
+  * In an adjacency list, the nodes will be numbered from 0 to n - 1. The input will be a 2D integer array, let's call it graph. graph[i] will be a list of all the outgoing edges from the ith node. This is the best format, equvalent to the hashmap, usually it does not need conversion.
 * Adjacency matrix
   * The nodes will be numbered from 0 to n - 1. You will be given a 2D matrix of size n x n, let's call it graph. If graph[i][j] == 1, that means there is an outgoing edge from node i to node j.
   * We can preproess the matrix to create a **hashmap** to aovid going through the matrix everytime when we need to access neighbor of ith node. Though both approaches are O(n2).
@@ -209,3 +208,28 @@ In graph problems, there are multiple common formats that graph will be given in
 
 ## DFS
 When using DFS on graph questions, it helps to maintain a seen set or array to track which node was visited to avoid cycle/undirected graph questions.
+
+It is also very common to use a boolean array `seen` to track which node has been visited. In DFS, especially in recursion, **make sure that the node is marked as seen** before go into the recursion function.
+```cpp
+// some for loop
+for(auto v: map[curr]){
+    if(!seen[v]){
+        seen[v] = true; //VERY IMPORTANT
+        dfs(v);
+    }
+}
+```
+
+Mark the element as seen before entering the recursion ganrantees that same node won't be accessed multiple times causing duplicated count.
+
+Example:
+Here is the graph[[0,1], [0,2], [1,2]]. If we start with 0, the dfs steps are:
+* 0 connects to 1 and 2, add both to the stack. stack: [2,1];
+* pop stack top, 1 is popped.
+* 1 connects to 2. If we don't mark 2 as seen before adding it to the stack, **2 will be again added to the stack**, ending up with [2,2]. The algo basically processes node #2 twice.
+
+
+## BFS
+In many graph problems, it doesn't really matter if you use DFS or BFS. But, there are some problems where using BFS is clearly better than using DFS. In trees, this was the case when we were concerned with tree levels. In graphs, it is mostly the case when you are asked to find the **shortest path**.
+
+BFS on a graph always visits nodes according to their distance from the starting point. This is the key idea behind BFS on graphs - every time you visit a node, you must have reached it in the minimum steps possible from wherever you started your BFS.

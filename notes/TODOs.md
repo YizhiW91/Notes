@@ -196,6 +196,17 @@ Q1971. Find if Path Exists in Graph
 Q1557. Minimum Number of Vertices to Reach All Nodes
   * Don't over think.
 
+Q1091. Shortest Path in Binary Matrix
+  * handing multi-direction sub problems.
+  * It is a smart way to handle set<pair<foo>> if pair is <row, col>. We can just use vector<vector<bool>> as seen;
+  * Smart to add a count in the queue.
+
+Q863. All Nodes Distance K in Binary Tree(Try again)
+  * A nice example of converting tree into graph.
+
+Q542. 01 Matrix(Try again)
+  * Use 0 as start
+
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
 * Red-black tree??
