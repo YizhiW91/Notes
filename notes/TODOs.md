@@ -201,11 +201,13 @@ Q1091. Shortest Path in Binary Matrix
   * It is a smart way to handle set<pair<foo>> if pair is <row, col>. We can just use vector<vector<bool>> as seen;
   * Smart to add a count in the queue.
 
-Q863. All Nodes Distance K in Binary Tree(Try again)
+Q863. All Nodes Distance K in Binary Tree
   * A nice example of converting tree into graph.
 
-Q542. 01 Matrix(Try again)
+Q542. 01 Matrix
   * Use 0 as start
+  * Some performance consideration in c++
+    * Try to use fixed size array like pair or tuple than vector. The former uses stack and the latter uses heap which is more expansive.
 
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
