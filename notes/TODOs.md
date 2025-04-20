@@ -209,6 +209,12 @@ Q542. 01 Matrix
   * Some performance consideration in c++
     * Try to use fixed size array like pair or tuple than vector. The former uses stack and the latter uses heap which is more expansive.
 
+Q1129. Shortest Path ith Alternating Colors
+  * Similar question as the one below, a bit simpler.
+Q1293. Shortest Path in a grid with obstacles elimination
+  * Tricky of how to track the seen. Need to think through.
+    * The idea is if visiting a cell that has been visited, as long as the current remaining obstacle removal is greater than the previous visit, we should visit the cell again. The reason is if the cell has been visited, because it is BFS so the steps used to visit the cell is definitely <= the current step. However, if the current step requires less obs removal, we should still visit it.
+
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
 * Red-black tree??
