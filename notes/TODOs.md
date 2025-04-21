@@ -214,6 +214,13 @@ Q1129. Shortest Path ith Alternating Colors
 Q1293. Shortest Path in a grid with obstacles elimination
   * Tricky of how to track the seen. Need to think through.
     * The idea is if visiting a cell that has been visited, as long as the current remaining obstacle removal is greater than the previous visit, we should visit the cell again. The reason is if the cell has been visited, because it is BFS so the steps used to visit the cell is definitely <= the current step. However, if the current step requires less obs removal, we should still visit it.
+Q.909 Snakes and Ladders
+  * The index conversion is the tricky part.
+Q752. Open the lock
+  * Same thing, the index part is tricky.
+  * to push '9' +1 to '0', you can use (x+1)%10 + '0' to get the int value of the char.
+Q399 Evaluate Division(try again)
+  * Need to be able to convert the question to a graph problem.
 
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
