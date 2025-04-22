@@ -221,6 +221,10 @@ Q752. Open the lock
   * to push '9' +1 to '0', you can use (x+1)%10 + '0' to get the int value of the char.
 Q399 Evaluate Division(try again)
   * Need to be able to convert the question to a graph problem.
+Q2101. Detonate the Maximum Bombs
+  * Math!
+Q127. Word Ladder
+  * Time and space complexity.
 
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions

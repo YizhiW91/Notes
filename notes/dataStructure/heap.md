@@ -1,7 +1,11 @@
 # Heap
+A heap is a container that stores elements, and supports the following operations:
+* Add an element in O(logn)
+* Remove the minimum element in O(logn)
+* Find the minimum element in O(1)
 
 ## Relation with Binary Tree
-Heap is the array representation of a complete binary tree.
+Heap is the array representation of a **complete binary tree**.
 * A complete binary tree is a binary tree that strictly follow left to right population. All levels are fully populated, except the last level, which also needs to follow left to right population.
 
 ## Calculation with complete binary tree
@@ -21,3 +25,53 @@ The process is to put the number at certain location, and keep moving it down. T
 ## When to create your own heap
 Every language has their own priority queue implementation, but it usually only support add and poll. 
 If you want to change a number inside the array or doing something fancy, you need to create your own heap.
+
+## C++ implementation of heap
+```cpp
+priority_queue<int> heap; // max heap by default
+
+// add
+heap.push(1);
+heap.push(2);
+
+// peek
+heap.top();
+
+// removal
+heap.pop();
+
+// Get size
+heap.size();
+
+// Bonus: convert a vector into a heap in linear time
+priority_queue<int> heap(nums.begin(), nums.end());
+
+// to implement a min heap:#include <queue>
+std::priority_queue<int, std::vector<int>, std::greater<int>> minHeap;
+```
+
+## Java implementation of heap
+```java
+// In Java, we will use the PriorityQueue interface and the
+// PriorityQueue implementation. By default, this implements
+// a min heap
+PriorityQueue<Integer> heap = new PriorityQueue<>();
+
+// Add to heap
+heap.add(1);
+heap.add(2);
+heap.add(3);
+
+// Check minimum element
+heap.peek(); // 1
+
+// Pop minimum element
+heap.remove(); // 1
+
+// Get size
+heap.size(); // 2
+
+// Bonus: if you want a max heap instead, you can pass
+// Comparator.reverseOrder() to the constructor:
+PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Comparator.reverseOrder());
+```
