@@ -226,6 +226,10 @@ Q2101. Detonate the Maximum Bombs
 Q127. Word Ladder
   * Time and space complexity.
 
+Two Heaps:
+Q480. Sliding Window Median
+Q295. Find Median from Data Stream
+
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
 * Red-black tree??

@@ -22,6 +22,10 @@ The process is to put the number at certain location, and keep moving it up. The
 The operation of inserting a number to the correct position of a complete binary tree. 
 The process is to put the number at certain location, and keep moving it down. The process complexity is O(LogN) because it is just the depth of the tree.
 
+## In place array to heap
+This process takes O(n) time, by using bottom-up heap construction.
+Only the nodes closer to the root need more sifting (log n), but there are fewer of them.
+
 ## When to create your own heap
 Every language has their own priority queue implementation, but it usually only support add and poll. 
 If you want to change a number inside the array or doing something fancy, you need to create your own heap.
@@ -44,7 +48,8 @@ heap.pop();
 heap.size();
 
 // Bonus: convert a vector into a heap in linear time
-priority_queue<int> heap(nums.begin(), nums.end());
+// This process takes O(n) time by skipping the last layer of leaf nodes.
+priority_queue<int> heap(nums.begin(), nums.end()); 
 
 // to implement a min heap:#include <queue>
 std::priority_queue<int, std::vector<int>, std::greater<int>> minHeap;
@@ -75,3 +80,7 @@ heap.size(); // 2
 // Comparator.reverseOrder() to the constructor:
 PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Comparator.reverseOrder());
 ```
+
+## 2-heaps
+Using multiple heaps is uncommon and the problems that require it are generally on the harder side. 
+If a problem involves finding a **median**, it's a good thing to think about. 
