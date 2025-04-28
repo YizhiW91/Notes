@@ -67,6 +67,11 @@ public int[] quickSort(int[] arr, int l, int r){
 * Similar questions:
   * Sort Colors(Dutch flag) #75
 
+### Quick Select
+This is the a common trick uses for select top K element from an array. Basically it is the quick sort algorithm, but instead of sort both sides after partition, since we only care about the top K element, we will always keeping sorting one side only. This reduces the time complecity from O(NlogN) to O(N).
+
+Q347. Top K Frequent Elements
+
 ## Heap Sort
 The soring process relies on heap operation. Pseudo code:
 ```java 

@@ -84,3 +84,11 @@ PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Comparator.reverseOrder());
 ## 2-heaps
 Using multiple heaps is uncommon and the problems that require it are generally on the harder side. 
 If a problem involves finding a **median**, it's a good thing to think about. 
+
+
+## Top k Questions
+One common type of interview problem is one that asks you to find the k best elements. 
+
+Normal solution would require sorting the input array and take the top k element out. This takes O(nlogn) time. 
+
+Using heap, we can optimize the solution to **O(nlogk)** time by keeping a heap with k capacity.

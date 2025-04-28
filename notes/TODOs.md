@@ -230,6 +230,12 @@ Two Heaps:
 Q480. Sliding Window Median
 Q295. Find Median from Data Stream
 
+Q347. Top K Frequent Elements(Try again)
+  * Try both heap and QuickSelect algo.
+Q658. Find K Closest Elements
+  * Heap
+  * Binary search
+
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
 * Red-black tree??
