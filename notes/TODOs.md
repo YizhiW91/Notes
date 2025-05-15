@@ -236,6 +236,13 @@ Q658. Find K Closest Elements
   * Heap
   * Binary search
 
+
+Q2294. Partition Array Such That Maximum Difference Is K
+
+Q502. IPO
+  * Do not use queue.
+
+
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
 * Red-black tree??
