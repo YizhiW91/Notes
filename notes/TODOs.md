@@ -242,6 +242,8 @@ Q2294. Partition Array Such That Maximum Difference Is K
 Q502. IPO
   * Do not use queue.
 
+Q1323. Maximum 69 Number
+  * Try space O(1) solution
 
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
