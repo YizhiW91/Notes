@@ -23,7 +23,7 @@ What binary search can do given an array:
 int binarySearch(vector<int>& arr, int target){
   int left = 0, right = arr.size()-1;
   while(left<=right){ // add equality left == right condition to make sure all elements are visited
-
+  // when use condition left<=right, the if-else below should always move left or right one position away from mid to make sure the logic doesn't gridlock.
     int mid = left + (right-left)/2;
     if(arr[mid] == target){
       return mid;
@@ -50,6 +50,7 @@ int binarySearch(vector<int>& arr, int target){
     }
   }
   return left;
+}
 ```
 
 ### Search for right most insertion index(right most x index + 1) of x **WITH** duplicates
@@ -65,4 +66,14 @@ int binarySearch(vector<int>& arr, int target){
     }
   }
   return left;
+}
 ```
+
+### Search the solution space
+There is a more creative way to use binary search - on a solution space/answer. A very common type of problem is "what is the max/min that something can be done". 
+
+The process is as follows:
+* First, we establish the possible solution space by identifying the minimum possible answer and the maximum possible answer.
+* Next, we binary search on this solution space. For each mid, we perform a check to see if the task is possible. Depending on the result, we halve the search space. Eventually, we will find the threshold.
+* The complexity is O(n * logk). Where k is the solution space, and O(n) is to determine if mid is a feasible solution.
+

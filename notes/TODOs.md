@@ -247,6 +247,16 @@ Q1323. Maximum 69 Number
 Q2300. Successful Pairs of Spells and Potions 
   * Figure out the boundary cases.
 
+Q2389. Longest Subsequence With Limited Sum
+  * Try binary search, try the built in method.
+
+Q875. Koko Eating Bananas
+  * try space O(1) solution.
+
+Q1631. Path With Minimum Effort
+  * Read the question clearly!
+  * Should also learn dijkstra
+
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
 * Red-black tree??
