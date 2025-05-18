@@ -236,7 +236,6 @@ Q658. Find K Closest Elements
   * Heap
   * Binary search
 
-
 Q2294. Partition Array Such That Maximum Difference Is K
 
 Q502. IPO
@@ -244,6 +243,9 @@ Q502. IPO
 
 Q1323. Maximum 69 Number
   * Try space O(1) solution
+
+Q2300. Successful Pairs of Spells and Potions 
+  * Figure out the boundary cases.
 
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
