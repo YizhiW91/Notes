@@ -257,6 +257,11 @@ Q1631. Path With Minimum Effort
   * Read the question clearly!
   * Should also learn dijkstra
 
+Q410. Split Array Largest Sum
+Q1231. Divide Chocolate
+  * Try DP
+  * Try binary search. They are the same problem, the chocolate one is trickier. Need to convert the question into binary search logic.
+
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
 * Red-black tree??

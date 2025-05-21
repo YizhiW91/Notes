@@ -77,3 +77,34 @@ The process is as follows:
 * Next, we binary search on this solution space. For each mid, we perform a check to see if the task is possible. Depending on the result, we halve the search space. Eventually, we will find the threshold.
 * The complexity is O(n * logk). Where k is the solution space, and O(n) is to determine if mid is a feasible solution.
 
+Examples of looking for minimum:
+```cpp
+int binarySearch(){
+  int left, right;
+  while(left<=right){  // we can use quality here, but the conditions below will always move.
+    int mid = left + (right-left)/2;
+    if(checkMidCanSatisfyCondition(mid)){
+      right = mid - 1; // even if the mid is already the min, we still move right because we are returning left as the answer at the end. This is just to trigger the left == right condition to move left 1 position up.
+    }else{
+      left = mid + 1;
+    }
+  }
+  return left;
+}
+```
+
+Examples of looking for maximum:
+```cpp
+int binarySearch(){
+  int left, right;
+  while(left<=right){  // we can use quality here, but the conditions below will always move.
+    int mid = left + (right-left)/2;
+    if(checkMidCanSatisfyCondition(mid)){
+      left = mid + 1;
+    }else{
+      right = mid - 1;
+    }
+  }
+  return right; // returning right instead of left;
+}
+```
