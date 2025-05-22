@@ -262,6 +262,12 @@ Q1231. Divide Chocolate
   * Try DP
   * Try binary search. They are the same problem, the chocolate one is trickier. Need to convert the question into binary search logic.
 
+Q46. Permutation.
+  * BT. Remember to recover the array after each permutation.
+
+Q78. Subsets
+  * Need to understand why it write the for loop backtrack.
+
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
 * Red-black tree??
