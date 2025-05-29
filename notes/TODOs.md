@@ -268,6 +268,22 @@ Q46. Permutation.
 Q78. Subsets
   * Need to understand why it write the for loop backtrack.
 
+Q39. Combination Sum
+  * Seems to be a more compliated backtracking problem.
+  * Try to estimate time complexity.
+
+Q52. N-Queens II
+  * Interesting way to track the diagonals v.s anti-diagonals positions in a board.
+
+Q79. Word Search
+  * Try to use backtrack, and understand the difference between DFS and backtrack.
+
+Q22. Generate Parentheses
+  * Solve it faster. Also note down the way how to check the parentheses are valid.
+
+Q967. Numbers With Same Consecutive Differences
+  * Try again.
+
 Binary Tree FAANG Questions:
 * https://leetcode.com/discuss/interview-question/6454930/binary-tree-faang-questions
 * Red-black tree??

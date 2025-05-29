@@ -54,3 +54,43 @@ public:
     }
 };
 ```
+
+
+### More Constrained Backtracking Question
+Example 39. Combination Sum
+Given an array of distinct integers candidates and a target integer target, return a list of all unique combinations of candidates where the chosen numbers sum to target. You may return the combinations in any order.
+
+The same number may be chosen from candidates an unlimited number of times. Two combinations are unique if the frequency of at least one of the chosen numbers is different.
+
+The test cases are generated such that the number of unique combinations that sum up to target is less than 150 combinations for the given input.
+
+
+```cpp
+class Solution {
+public:
+    vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
+        vector<vector<int>> ans;
+        vector<int> selected;
+        backtracking(selected, candidates, 0, ans, target);
+        return ans;
+    }
+
+    void backtracking(vector<int>& selected, vector<int>& candidates, int idx, vector<vector<int>>& ans, int target){
+        if(target == 0){
+            ans.push_back(selected);
+            return;
+        }
+
+        for(int i=idx; i<candidates.size(); i++){
+            int c = candidates[i];
+            if(target>=c){ 
+                // this is the core. When we select C, we run backtrack with a new target = target - c          
+                selected.push_back(c);
+                backtracking(selected, candidates, i, ans, target-c);
+                // when we don't select c, we move to the next candidate.
+                selected.pop_back();
+            }
+        }
+    }
+};
+```
